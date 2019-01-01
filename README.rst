@@ -9,7 +9,7 @@ Note that it requires Python 3.7 or later.  It can be installed using ``pip``:
    pip install last.fm-memories
 
 You need a Last.fm API key first, and can get one from here__.  The first time
-you run this program, it will asks an API key pair (or you could configure it
+you run this program, it asks an API key pair (or you could configure it
 through ``-k``/``--api-key`` and ``-s``/``--api-secret`` options).
 
 The following command lists albums you had listened the year before last:
