@@ -164,11 +164,11 @@ def main(
     )
     operation = OPERATIONS[unit]
     pairs = operation(criteria)
-    if desc:
-        pairs = list(pairs)[::-1]
     width, _ = shutil.get_terminal_size()
     width -= 1  # Pad the most right with a space
-    freq_width = len(str(pairs[0][1] if pairs else 0))
+    freq_width = len(str(pairs[-1][1] if pairs else 0))
     title_width = width - freq_width - 1
+    if desc:
+        pairs = list(pairs)[::-1]
     for item, freq in pairs:
-        print(f'{pad_right(str(item), title_width)} {freq:-{freq_width}}')
+        print(f'{pad_right(str(item), title_width)} {freq:>{freq_width}}')
