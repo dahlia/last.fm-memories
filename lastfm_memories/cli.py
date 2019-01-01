@@ -70,7 +70,7 @@ def pad_right(text: str, width: int) -> str:
             text_width += len(match.group(1))
         else:
             east_asian_width = unicodedata.east_asian_width(match.group(2))
-            text_width += 1 + int(east_asian_width == 'W')
+            text_width += 1 + int(east_asian_width in 'FW')
     return text + ' ' * (width - text_width)
 
 
