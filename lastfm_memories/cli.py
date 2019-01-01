@@ -167,6 +167,7 @@ def main(
     if desc:
         pairs = list(pairs)[::-1]
     width, _ = shutil.get_terminal_size()
+    width -= 1  # Pad the most right with a space
     freq_width = len(str(pairs[0][1] if pairs else 0))
     title_width = width - freq_width - 1
     for item, freq in pairs:
