@@ -6,6 +6,8 @@ Version 0.1.2
 
 To be released.
 
+- Fixed an error occurred when a unit is omitted in CLI.
+
 
 Version 0.1.1
 -------------

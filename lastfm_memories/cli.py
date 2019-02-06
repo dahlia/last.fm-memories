@@ -133,7 +133,7 @@ def pad_right(text: str, width: int) -> str:
 @argument(
     'unit',
     type=Choice(OPERATIONS.keys(), case_sensitive=False),
-    default='artist',
+    default='artists',
 )
 def main(
     api_key: str,
